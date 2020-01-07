@@ -60,3 +60,4 @@ for l in dict_items[:5]:
 print()
 print('Уникальные слова:')
 print(unique_words)
+print('Количество уникальных слов: ', len(unique_words))
