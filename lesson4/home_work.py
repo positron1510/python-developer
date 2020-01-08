@@ -22,12 +22,12 @@ print(F(sample_names, 100))
 def popular_name(names, count):
     names = F(names, count)
     index = 0
-    max = 0
+    max_entry = 0
 
     for i in range(len(names)):
         count = names.count(names[i])
-        if count > max:
-            max = count
+        if count > max_entry:
+            max_entry = count
             index = i
 
     return names[index]
@@ -41,13 +41,13 @@ print('Самое частое имя: : ', popular_name(sample_names, 100))
 
 def rare_letter(names, count):
     letters = list(map(lambda x: x[0], F(names, count)))
-    min = len(letters)
+    min_entry = len(letters)
     index = 0
 
     for i in range(len(letters)):
         count = letters.count(letters[i])
-        if count < min:
-            min = count
+        if count < min_entry:
+            min_entry = count
             index = i
 
     return letters[index]
