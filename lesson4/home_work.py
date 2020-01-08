@@ -72,4 +72,4 @@ for k in range(len(logs)):
     dt.append(datetime(*args))
 
 print()
-print('Самая свежая запись в логе: ', max(*dt))
+print('Самая поздняя метка времени в логе: ', max(*dt))
