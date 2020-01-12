@@ -9,9 +9,7 @@ def simple_numbers_list(n):
     :return: list
     """
     nums = [1]
-    for i in range(2, n + 1):
-        if is_simple_number(i):
-            nums.append(i)
+    nums.extend([i for i in range(2, n + 1) if is_simple_number(i)])
     return nums
 
 def is_simple_number(n):
@@ -37,12 +35,7 @@ def dividers(n, simple_numbers):
     """
     if n in simple_numbers:
         return [n]
-
-    l = []
-    for i in range(2, n):
-        if n % i == 0:
-            l.append(i)
-    return l
+    return [i for i in range(2, n) if n % i == 0]
 
 def simple_multipliers(n, simple_numbers):
     """
