@@ -47,18 +47,17 @@ def simple_multipliers(n, simple_numbers):
     if n in simple_numbers:
         return n
 
-    d = 2
+    # убираем единицу из списка
+    simple_numbers.pop(0)
+    d = simple_numbers.pop(0)
     c = collections.Counter()
 
     while True:
-        if d not in simple_numbers:
-            d += 1
-            continue
         if n % d == 0:
             c[d] += 1
             n = n / d
         else:
-            d += 1
+            d = simple_numbers.pop(0)
         # условие выхода из безконечного цикла
         if 1 == n:
             break
