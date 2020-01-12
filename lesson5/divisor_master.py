@@ -4,7 +4,7 @@ from math import sqrt
 
 def simple_numbers_list(n):
     """
-    Список простых чисел в диапазоне от 2 до num
+    Список простых чисел в диапазоне от 2 до n
     :param n: int
     :return: list
     """
