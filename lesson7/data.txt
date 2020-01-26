@@ -1,0 +1,5 @@
+Granta 1.6 0.5
+Vesta 1.8 0.9
+Largus 1.6 0.7
+Niva 1.7 0.6
+Oka 0.8 0.3
